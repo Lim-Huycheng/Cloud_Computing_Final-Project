@@ -1,0 +1,12 @@
+body{
+    font-family: 'Open Sans';
+}
+
+.container{
+    color: #123;
+}
+
+.navbar-brand{
+    width: 50%;
+    height: 50%;
+}

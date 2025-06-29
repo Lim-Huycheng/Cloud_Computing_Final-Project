@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Fix</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  crossorigin="anonymous"
+></script>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container-md">
+    
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand -->
+    <a class="navbar-brand ms-2" href="#">
+      <img src="/image\Screenshot 2025-06-30 011127.png" alt="Logo" width="120" height="50" />
+    </a>
+
+    <!-- Search + Links -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto ms-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">ABOUT TBL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ARTIST</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">NEWS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MERCH</a>
+        </li>
+        
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+</body>
+</html>
