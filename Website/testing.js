@@ -11,7 +11,7 @@ const services = [
     strategy: "Use micro instance types within free tier limits to avoid charges.",
     category: "Compute",
     link: "https://aws.amazon.com/ec2/",
-    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
+    image: "images/aws-ec2.png"
     },
     {
     name: "Amazon S3 (Simple Storage Service)",
@@ -23,7 +23,7 @@ const services = [
     strategy: "Store backups and static content using free tier limits.",
     category: "Storage",
     link: "https://aws.amazon.com/s3/",
-    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448353594_916932043777994_708975337486974907_n.jpg"
+    image: "images/aws-s3.svg"
     },
     {
     name: "Elastic Load Balancer (ALB)",
@@ -35,7 +35,8 @@ const services = [
     strategy: "Use with Auto Scaling to build resilient apps; control costs with monitoring.",
     category: "Networking & Content Delivery",
     link: "https://aws.amazon.com/elasticloadbalancing/",
-    pricePerUnit: 0.025,  // example price per hour
+    image: "images/aws-alb.png",
+    pricePerUnit: 0.025,
     unit: "hour"
     },
     {
@@ -48,6 +49,7 @@ const services = [
     strategy: "Follow least-privilege principle to secure AWS resources.",
     category: "Security & Identity",
     link: "https://aws.amazon.com/iam/",
+    image: "images/aws-iam.webp",
     pricePerUnit: 0,
     unit: "unit"
     },
@@ -60,7 +62,8 @@ const services = [
     description: "Managed relational database service.",
     strategy: "Use free tier eligible engines and instance sizes.",
     category: "Database",
-    link: "https://aws.amazon.com/rds/"
+    link: "https://aws.amazon.com/rds/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "AWS Lambda",
@@ -71,7 +74,8 @@ const services = [
     description: "Run code without provisioning servers.",
     strategy: "Use serverless compute to reduce costs and scale automatically.",
     category: "Compute",
-    link: "https://aws.amazon.com/lambda/"
+    link: "https://aws.amazon.com/lambda/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon CloudFront",
@@ -82,7 +86,8 @@ const services = [
     description: "Content delivery network service.",
     strategy: "Accelerate delivery and reduce latency with free tier usage.",
     category: "Networking & Content Delivery",
-    link: "https://aws.amazon.com/cloudfront/"
+    link: "https://aws.amazon.com/cloudfront/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon DynamoDB",
@@ -93,7 +98,8 @@ const services = [
     description: "Managed NoSQL database service.",
     strategy: "Use provisioned throughput within free limits for small workloads.",
     category: "Database",
-    link: "https://aws.amazon.com/dynamodb/"
+    link: "https://aws.amazon.com/dynamodb/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon SNS (Simple Notification Service)",
@@ -104,7 +110,8 @@ const services = [
     description: "Simple notification service for pub/sub messaging.",
     strategy: "Use for alerts and notifications within free tier limits.",
     category: "Application Integration",
-    link: "https://aws.amazon.com/sns/"
+    link: "https://aws.amazon.com/sns/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon SQS (Simple Queue Service)",
@@ -115,7 +122,8 @@ const services = [
     description: "Fully managed message queuing service.",
     strategy: "Use for decoupling components and buffering messages.",
     category: "Application Integration",
-    link: "https://aws.amazon.com/sqs/"
+    link: "https://aws.amazon.com/sqs/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon Elastic Beanstalk",
@@ -126,7 +134,8 @@ const services = [
     description: "Platform as a service to deploy and manage apps.",
     strategy: "Use free tier eligible resources to minimize costs.",
     category: "Compute",
-    link: "https://aws.amazon.com/elasticbeanstalk/"
+    link: "https://aws.amazon.com/elasticbeanstalk/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon EBS (Elastic Block Store)",
@@ -137,7 +146,8 @@ const services = [
     description: "Block storage volumes for use with EC2.",
     strategy: "Use free tier storage to avoid extra charges.",
     category: "Storage",
-    link: "https://aws.amazon.com/ebs/"
+    link: "https://aws.amazon.com/ebs/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon Elasticsearch Service (OpenSearch Service)",
@@ -148,7 +158,8 @@ const services = [
     description: "Search and analytics engine.",
     strategy: "Use managed service with caution to control costs.",
     category: "Analytics",
-    link: "https://aws.amazon.com/opensearch-service/"
+    link: "https://aws.amazon.com/opensearch-service/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "AWS CloudFormation",
@@ -159,7 +170,8 @@ const services = [
     description: "Infrastructure as Code (IaC) service.",
     strategy: "Automate resource provisioning efficiently.",
     category: "Management & Governance",
-    link: "https://aws.amazon.com/cloudformation/"
+    link: "https://aws.amazon.com/cloudformation/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "AWS Glue",
@@ -170,7 +182,8 @@ const services = [
     description: "Serverless data integration service.",
     strategy: "Use for ETL workloads, monitor job run time carefully.",
     category: "Analytics",
-    link: "https://aws.amazon.com/glue/"
+    link: "https://aws.amazon.com/glue/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "Amazon Aurora",
@@ -181,7 +194,8 @@ const services = [
     description: "High-performance relational database.",
     strategy: "Good for high availability and scalability, watch costs.",
     category: "Database",
-    link: "https://aws.amazon.com/rds/aurora/"
+    link: "https://aws.amazon.com/rds/aurora/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg"
     },
     {
     name: "AWS CodeBuild",
@@ -193,6 +207,7 @@ const services = [
     strategy: "Keep builds minimal to stay within free tier.",
     category: "Developer Tools",
     link: "https://aws.amazon.com/codebuild/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.005, 
     unit: "minute"
     },
@@ -206,6 +221,7 @@ const services = [
     strategy: "Use free custom metrics and logs wisely.",
     category: "Monitoring & Management",
     link: "https://aws.amazon.com/cloudwatch/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.30,
     unit: "GB"
     },
@@ -219,6 +235,7 @@ const services = [
     strategy: "Optimize workflows to stay under free limit.",
     category: "Application Integration",
     link: "https://aws.amazon.com/step-functions/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.000025,
     unit: "transition"
     },
@@ -232,6 +249,7 @@ const services = [
     strategy: "Rotate secrets to improve security, budget carefully.",
     category: "Security, Identity & Compliance",
     link: "https://aws.amazon.com/secrets-manager/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.40,
     unit: "secret"
     },
@@ -245,6 +263,7 @@ const services = [
     strategy: "Optimize queries to stay in free tier.",
     category: "API & App Integration",
     link: "https://aws.amazon.com/appsync/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.000004,
     unit: "query"
     },
@@ -258,6 +277,7 @@ const services = [
     strategy: "Minimize shards and PUT payloads to reduce cost.",
     category: "Analytics",
     link: "https://aws.amazon.com/kinesis/data-streams/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.015,
     unit: "shard-hour"
     },
@@ -271,6 +291,7 @@ const services = [
     strategy: "Control usage hours and transfer volumes.",
     category: "Migration & Transfer",
     link: "https://aws.amazon.com/aws-transfer-family/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.30,
     unit: "hour"
     },
@@ -284,6 +305,7 @@ const services = [
     strategy: "Limit rules and requests to control cost.",
     category: "Security, Identity & Compliance",
     link: "https://aws.amazon.com/waf/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.60,
     unit: "rule"
     },
@@ -297,6 +319,7 @@ const services = [
     strategy: "Combine records in a single hosted zone.",
     category: "Networking & Content Delivery",
     link: "https://aws.amazon.com/route53/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.50,
     unit: "zone"
     },
@@ -310,6 +333,7 @@ const services = [
     strategy: "Use lifecycle policies to optimize costs.",
     category: "Storage",
     link: "https://aws.amazon.com/backup/",
+    image: "https://chornay-bucket-for-cloud-project.s3.us-east-1.amazonaws.com/448303799_916932447111287_8037995360757338166_n.jpg",
     pricePerUnit: 0.05,
     unit: "GB"
     }
