@@ -1,0 +1,52 @@
+{
+  "variables": {
+    "aws_region": "us-east-1"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "{{user `aws_region`}}",
+      "source_ami_filter": {
+        "filters": {
+          "name": "amzn2-ami-hvm-*-x86_64-gp2",
+          "virtualization-type": "hvm",
+          "root-device-type": "ebs"
+        },
+        "owners": ["amazon"],
+        "most_recent": true
+      },
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "webserver-baked-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo yum update -y",
+        "sudo yum install -y httpd",
+        "sudo systemctl enable httpd"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "../website/index.html",
+      "destination": "/tmp/index.html"
+    },
+    {
+      "type": "file",
+      "source": "../website/error.html",
+      "destination": "/tmp/error.html"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo mv /tmp/index.html /var/www/html/index.html",
+        "sudo mv /tmp/error.html /var/www/html/error.html",
+        "sudo chown apache:apache /var/www/html/*.html",
+        "sudo systemctl start httpd"
+      ]
+    }
+  ]
+}
