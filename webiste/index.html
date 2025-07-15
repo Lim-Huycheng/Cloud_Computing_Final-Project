@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🔥 AWS Service 🔥</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://group3-cloud-bucket-d4e7a1f2.s3.us-east-1.amazonaws.com/styles.css"/>
+
+</head>
+<body>
+  <header>
+    <h1>🔥AWS Service 🔥</h1>
+    <p>Quickly explore AWS service tiers and pricing info</p>
+    <button id="toggle-dark" aria-pressed="false" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    <div class="search-group">
+      <input id="search" type="search" placeholder="Search AWS services..." aria-label="Search AWS services" />
+      <select id="category-filter" aria-label="Filter services by category"></select>
+    </div>
+    </select>
+  </header>
+
+  <main id="cards-container" role="list" aria-live="polite">
+    <!-- Cards injected here -->
+  </main>
+  <section id="estimator">
+    <h2>🧮 AWS Cost Estimator</h2>
+    <h3>See What AWS Might Cost You</h3>
+    <p>💡 Estimates only — real bills may surprise you (hopefully not too much!).</p>
+
+    
+    <div class="estimator-block">
+      <h3>🔹 Add Service </h3>
+      <div id="estimate-form">
+        <select id="multi-service-selector" multiple>
+          <!-- Options populated dynamically -->
+        </select>
+
+        <select id="duration-selector-single" style="min-width: 160px;">
+          <option value="0">Select Duration</option>
+          <option value="1w">1 Week</option>
+          <option value="2w">2 Weeks</option>
+          <option value="1m">1 Month</option>
+          <option value="2m">2 Months</option>
+        </select>
+
+        <button id="add-selected-services">Add Selected</button>
+      </div>
+    </div>
+
+    <div id="estimate-list">
+      <table aria-label="AWS Services Cost Estimate" role="table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Usage</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <div class="buttons-container">
+        <button id="remove-all">Remove All</button>
+      </div>
+    </div>
+
+    <p id="total-cost">Total: $0.00</p>
+  </section>
+
+  <footer>
+    &copy; 2025 AWS Free Tier Planner - Enjoy learning and relax
+  </footer>
+  <script src="https://group3-cloud-bucket-d4e7a1f2.s3.us-east-1.amazonaws.com/testing.js" defer></script>
+</body>
+</html>
