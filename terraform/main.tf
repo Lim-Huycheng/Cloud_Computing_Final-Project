@@ -182,3 +182,20 @@ resource "aws_lb_listener" "web_listener" {
     target_group_arn = aws_lb_target_group.web_tg.arn
   }
 }
+
+# --- CloudWatch Alarm ---
+resource "aws_cloudwatch_metric_alarm" "asg_low_instance_alarm" {
+  alarm_name          = "asg-low-instance-alarm"
+  comparison_operator = "LessThanThreshold"
+  evaluation_periods  = 2
+  metric_name         = "GroupInServiceInstances"
+  namespace           = "AWS/AutoScaling"
+  period              = 120
+  statistic           = "Average"
+  threshold           = 2
+  alarm_description   = "Alarm if ASG has fewer than 2 instances in service"
+
+  dimensions = {
+    AutoScalingGroupName = aws_autoscaling_group.web_asg.name
+  }
+}
